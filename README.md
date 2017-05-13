@@ -1,24 +1,25 @@
-# README
+# Curso de desenvolvimento Mobile com Ionic
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Curso de desenvolvimento mobile ministrado para acadêmicos do curso de computação da URI - Campus Erechim.
 
-Things you may want to cover:
 
-* Ruby version
+## Serviços
 
-* System dependencies
+POST /registers - Cria um novo registro
+```javascript
+{
+  {
+  	"register": {
+  		"nome": "Nome da Pessoa",
+  		"telefone": "54xxxxxxxxx",
+  		"tipo": "Cachorro",
+  		"caracteristicas": "Porte Grande, Pelo curto, Cor preta",
+  		"latitude": "38.775594038",
+  		"longitude": "-9.13536709",
+  		"foto":"<JPG BASE64>"
+  	}
+  }
+}
+```
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+GET /registers - Listagem dos registros
