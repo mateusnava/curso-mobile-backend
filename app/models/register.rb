@@ -20,7 +20,7 @@ class Register
   def create_foto
     if foto.present?
       FileUtils.mkdir_p('public/imagens')
-      file = "public/imagens/#{Time.now.to_i}.png"
+      file = "public/imagens/#{Time.now.to_i}.jpg"
       IO.binwrite(file, Base64.decode64(self.foto))
       self.foto = file
     end
