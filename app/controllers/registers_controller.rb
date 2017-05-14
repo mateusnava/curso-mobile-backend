@@ -9,7 +9,7 @@ class RegistersController < ApplicationController
         caracteristicas: register.caracteristicas,
         latitude: register.latitude,
         longitude: register.longitude,
-        foto: register.foto.gsub('public/', '')
+        foto: register.foto.try(:gsub, 'public/', '')
       }
     end
 
