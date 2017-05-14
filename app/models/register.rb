@@ -21,7 +21,7 @@ class Register
     if foto.present?
       FileUtils.mkdir_p('public/imagens')
       file = "public/imagens/#{Time.now.to_i}.jpg"
-      IO.binwrite(file, Base64.decode64(self.foto))
+      IO.binwrite(file, Base64.decode64(self.foto.gsub('data:image/jpeg;base64,', '')))
       self.foto = file
     end
   end
